@@ -16,4 +16,5 @@ public interface IDoctorService {
 
 	public String deleteDoctorsByIdsInBatch(List<Integer> ids);
 
+	public Doctor getDoctorByID(int id);
 }

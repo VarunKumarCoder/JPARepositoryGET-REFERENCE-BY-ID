@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import com.cdc.entity.Doctor;
 import com.cdc.service.IDoctorService;
 
 @Component
@@ -46,9 +47,10 @@ public class SortTestRunner implements CommandLineRunner {
 		}*/
 
 		try {
-
+			Doctor doc = service.getDoctorByID(1);
+			System.out.println(doc == null ? "Dooctor Not Found" : doc);
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 
 	}

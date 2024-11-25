@@ -56,4 +56,10 @@ public class DoctorServiceImpl implements IDoctorService {
 		return list.size() + "Records are deleted";
 	}
 
+	@Override
+	public Doctor getDoctorByID(int id) {
+		Doctor doctor = doctorRepo.getReferenceById(id);
+		return doctor;
+	}
+
 }
